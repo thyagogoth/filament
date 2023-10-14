@@ -11,6 +11,11 @@ class EditUser extends EditRecord
 {
     protected static string $resource = UserResource::class;
 
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
     protected function getHeaderActions(): array
     {
         return [
@@ -33,7 +38,7 @@ class EditUser extends EditRecord
     {
         return Notification::make()
             ->success()
-            ->title('User Updated')
+            ->title('User updated')
             ->body('The user was updated successfully!');
         //            ->sendToDatabase(auth()->user());
     }

@@ -94,7 +94,6 @@ class AdminPanelProvider extends PanelProvider
 
 //                FilamentTourPlugin::make()
             ])
-            ->databaseNotifications()
-            ->spa();
+            ->databaseNotifications();
     }
 }
