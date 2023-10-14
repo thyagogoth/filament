@@ -3,14 +3,12 @@
 namespace App\Filament\Pages\Auth;
 
 use Filament\Forms\Components\Component;
-use Filament\Pages\Auth\Register as AuthRegister;
-
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Pages\Auth\Register as AuthRegister;
 
 class Register extends AuthRegister
 {
-
     public function form(Form $form): Form
     {
         return $form
@@ -33,5 +31,4 @@ class Register extends AuthRegister
             ->maxLength(14)
             ->unique($this->getUserModel());
     }
-
 }

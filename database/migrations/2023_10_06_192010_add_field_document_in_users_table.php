@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('document')
-            ->unique()
-            ->after('email');
+                ->unique()
+                ->after('email');
         });
     }
 
