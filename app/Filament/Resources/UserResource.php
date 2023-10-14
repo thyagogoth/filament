@@ -12,7 +12,10 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Rmsramos\Activitylog\RelationManagers\ActivitylogRelationManager;
+use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
+use Ysfkaya\FilamentPhoneInput\Tables\PhoneInputColumn;
 
 class UserResource extends Resource
 {
@@ -50,6 +53,12 @@ class UserResource extends Resource
                         auth()->user()->hasRole('Admin') ? null : $query->where('name', '!=', 'Admin')
                     )
                     ->preload(),
+                PhoneInput::make('phone')
+                    ->separateDialCode(true)
+//                    ->ipLookup(function () {
+//                        return rescue(fn () => Http::get('https://ipinfo.io/json')->json('country'), app()->getLocale(), report: false);
+//                    })
+                    ->onlyCountries(['br']),
                 Forms\Components\FileUpload::make('avatar')
                     ->label('Avatar')
                     ->image()
@@ -77,6 +86,7 @@ class UserResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('document')
                     ->searchable(),
+                PhoneInputColumn::make('phone'),
                 Tables\Columns\TextColumn::make('email_verified_at')
                     ->since()
                     ->sortable()
