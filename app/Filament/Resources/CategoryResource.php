@@ -21,8 +21,6 @@ class CategoryResource extends Resource
 
     protected static ?string $navigationGroup = 'Blog';
 
-    protected static ?string $recordTitleAttribute = 'title';
-
     public static function form(Form $form): Form
     {
         return $form

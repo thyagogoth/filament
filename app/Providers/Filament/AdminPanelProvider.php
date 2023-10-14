@@ -44,7 +44,7 @@ class AdminPanelProvider extends PanelProvider
             ->login(Login::class)
             ->profile(EditProfile::class)
             ->registration(Register::class)
-            ->topNavigation()
+//            ->topNavigation()
             ->colors([
                 'primary' => Color::Amber,
             ])
@@ -78,17 +78,7 @@ class AdminPanelProvider extends PanelProvider
                     ->resource(AuditResource::class)
                     ->label('Log')
                     ->pluralLabel('Logs')
-                    ->navigationGroup('System'),
-
-                EnvironmentIndicatorPlugin::make()
-                    ->visible(fn () => auth()->user()->is_admin ?? false)
-                    ->color(fn () => match (app()->environment()) {
-                        'production' => null,
-                        'staging' => Color::Cyan,
-                        default => Color::Orange,
-                    })
-                    ->showBadge(true)
-                    ->showBorder(false),
+                    ->navigationGroup('Configurations'),
 
                 FilamentProgressbarPlugin::make()->color('#FFC107'),
 
@@ -97,7 +87,7 @@ class AdminPanelProvider extends PanelProvider
                 SpotlightPlugin::make(),
 
                 ThemesPlugin::make()
-//                    ->canViewThemesPage(fn () => auth()->user()?->is_admin)
+                    ->canViewThemesPage(fn () => auth()->user()?->is_admin)
 
 //                FilamentTourPlugin::make()
             ])
