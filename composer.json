@@ -12,6 +12,7 @@
         "awcodes/filament-sticky-header": "^2.0",
         "aymanalhattami/filament-slim-scrollbar": "^2.0",
         "filament/filament": "^3.0",
+        "filament/spatie-laravel-google-fonts-plugin": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.2",
         "hasnayeen/themes": "^3.0",
         "jibaymcs/filament-tour": "^3.0",

@@ -8,6 +8,7 @@ use App\Filament\Pages\Auth\Login;
 use App\Filament\Pages\Auth\Register;
 use App\Filament\Resources\AuditResource;
 use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
+use Filament\FontProviders\SpatieGoogleFontProvider;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -100,6 +101,7 @@ class AdminPanelProvider extends PanelProvider
 
 //                FilamentTourPlugin::make()
             ])
+            ->font('Ubuntu Condensed', provider: SpatieGoogleFontProvider::class)
             ->databaseNotifications();
     }
 }

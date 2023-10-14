@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b321b449f95ca0ff5d5e42bb5f313c21",
+    "content-hash": "8151429c8c832e0658d876f91c49da2f",
     "packages": [
         {
             "name": "awcodes/filament-sticky-header",
@@ -1423,6 +1423,44 @@
                 "source": "https://github.com/filamentphp/filament"
             },
             "time": "2023-10-13T19:26:43+00:00"
+        },
+        {
+            "name": "filament/spatie-laravel-google-fonts-plugin",
+            "version": "v3.0.76",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filamentphp/spatie-laravel-google-fonts-plugin.git",
+                "reference": "a1341e78978a8bc47eb5986910f20b9071044fe6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-google-fonts-plugin/zipball/a1341e78978a8bc47eb5986910f20b9071044fe6",
+                "reference": "a1341e78978a8bc47eb5986910f20b9071044fe6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0",
+                "illuminate/support": "^10.0",
+                "php": "^8.1",
+                "spatie/laravel-google-fonts": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Filament\\FontProviders\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Filament support for `spatie/laravel-google-fonts`.",
+            "homepage": "https://github.com/filamentphp/filament",
+            "support": {
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
+            },
+            "time": "2023-08-21T09:36:35+00:00"
         },
         {
             "name": "filament/support",
@@ -5400,6 +5438,87 @@
                 }
             ],
             "time": "2023-01-25T17:04:51+00:00"
+        },
+        {
+            "name": "spatie/laravel-google-fonts",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-google-fonts.git",
+                "reference": "8cc6efb698b7a1324229bc55d5ece8944835d43b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-google-fonts/zipball/8cc6efb698b7a1324229bc55d5ece8944835d43b",
+                "reference": "8cc6efb698b7a1324229bc55d5ece8944835d43b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.3|^7.2",
+                "illuminate/contracts": "^8.37|^9.0|^10.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.7.0"
+            },
+            "require-dev": {
+                "brianium/paratest": "^6.3",
+                "nunomaduro/collision": "^5.4|^6.0",
+                "orchestra/testbench": "^6.17|^7.0|^8.0",
+                "pestphp/pest": "^1.22",
+                "spatie/laravel-ray": "^1.17",
+                "spatie/pest-plugin-snapshots": "^1.1",
+                "spatie/phpunit-snapshot-assertions": "^4.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\GoogleFonts\\GoogleFontsServiceProvider"
+                    ],
+                    "aliases": {
+                        "GoogleFonts": "Spatie\\GoogleFonts\\GoogleFontsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\GoogleFonts\\": "src",
+                    "Spatie\\GoogleFonts\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Freek Van der herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage self-hosted Google Fonts in Laravel apps",
+            "homepage": "https://github.com/spatie/laravel-google-fonts",
+            "keywords": [
+                "google fonts",
+                "laravel",
+                "laravel-google-fonts",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-google-fonts/tree/1.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-01-24T23:50:49+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
